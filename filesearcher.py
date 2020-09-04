@@ -7,8 +7,9 @@ searchterm = input("Enter Searchterm: ")
 x = open("results.txt", "w+")
 x.close()
 include = []
+filename = __file__[::-1].replace(__file__[::-1][__file__[::-1].index("\\"):-1], "")[-2::-1]
 dir = listdir()
-dir.remove(__file__)
+dir.remove(filename)
 dir.remove("results.txt")
 
 def result(result):
